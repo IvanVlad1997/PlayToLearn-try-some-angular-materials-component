@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 import { UserInputsComponent } from './user-inputs/user-inputs.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ServicesComponent } from './services/services.component';
+import { HeroListComponent } from './pipes/hero-list/hero-list.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UserInputsComponent,
     PipesComponent,
-    ServicesComponent
+    ServicesComponent,
+    HeroListComponent,
+   
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Hero } from '../pipes/hero';
+import { TestService } from '../pipes/test.service';
 
 @Component({
   selector: 'app-user-inputs',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-inputs.component.css']
 })
 export class UserInputsComponent implements OnInit {
-
-  constructor() { }
+  heroes: Hero[]
+  constructor(heroService: TestService) {
+    this.heroes = heroService.getHeroes()
+    console.log(this.heroes)
+   }
 
   ngOnInit(): void {
   }
