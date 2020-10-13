@@ -1,0 +1,74 @@
+
+<!-- 
+<input #box (keyup.enter) = "addHero(box.value)"
+            (blur)="addHero(box.value)">
+<button (onClick) = "addHero(box.value)">Add</button>
+<ul>
+    <li *ngFor="let hero of heroes">{{hero}}</li>
+
+</ul> -->
+
+
+<p> {{ testForm | json}}</p>
+
+<form novalidate (ngSubmit) = "onSubmit()" >
+  
+        <p>
+            <mat-form-field>
+                <input matInput placeholder="name"
+                type="text"
+                [(ngModel)] = "testForm.name"
+                name="name">
+            </mat-form-field>
+            <!-- <mat-form-field>
+                <input matInput placeholder="canFly"
+                type="text"
+                [(ngModel)] = "testForm.canFly"
+                name="canFly">
+            </mat-form-field> -->
+            <mat-checkbox [(ngModel)] = "testForm.canFly"
+                            name = "canFly">Can Fly</mat-checkbox>
+        </p>
+   
+    
+        <span class="flex-spacer"></span>
+      
+        <button mat-button type="submit" >Submit</button>
+    
+</form>
+
+
+<!-- <div class="example-container">
+    <form (ngSubmit)="onSubmit() "  #f="ngForm">
+    <div class="form-group">
+    <mat-form-field appearance="fill">
+      <mat-label for="name">Input</mat-label>
+      <input matInput
+            type="text"
+            id="name"
+            ngModel
+            name="name"
+            class="form-control">
+    </mat-form-field>
+    <br> -->
+    <!-- <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select>
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+    </mat-form-field>
+    </div>
+    <br> -->
+    <!-- <mat-form-field appearance="fill">
+      <mat-label>Textarea</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    <button type="submit"
+        type="text"
+        id="name"
+        ngModel
+        name="name"
+     class="form-control">Trimite</button>
+</form>
+
+  </div> -->

@@ -1,0 +1,12 @@
+
+<div >
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile 
+            *ngFor = "let hero of (heroes | canFly ); let index=index">
+            {{hero.name | testpipe  }}
+        </mat-grid-tile>
+    </mat-grid-list>
+    <hr />
+   
+    
+</div>
