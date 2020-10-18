@@ -1,12 +1,17 @@
-
-<div >
+<h1>All heroes</h1>
     <mat-grid-list cols="2" rowHeight="2:1">
         <mat-grid-tile 
-            *ngFor = "let hero of (heroes | canFly ); let index=index">
+            *ngFor = "let hero of (heroes ); let index=index">
             {{hero.name | testpipe  }}
         </mat-grid-tile>
     </mat-grid-list>
     <hr />
+<h1>Heroes with fly powers</h1>
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile 
+            *ngFor = "let hero of (heroes | canFly); let index=index">
+            {{hero.name | testpipe  }}
+        </mat-grid-tile>
+    </mat-grid-list>
    
-    
-</div>
+
